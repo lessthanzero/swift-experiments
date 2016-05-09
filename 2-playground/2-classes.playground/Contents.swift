@@ -14,14 +14,21 @@ class TipCalculator {
         return subtotal * tipPct
     }
     
-    func printPossibleTips() {
-        print("15%: \(calcTipWithTipPct(0.15))")
-        print("18%: \(calcTipWithTipPct(0.18))")
-        print("20%: \(calcTipWithTipPct(0.20))")
+    func returnPossibleTips() -> [Int: Double] {
+        
+        let possibleTipsInferred = [0.15, 0.18, 0.20]
+        
+        var retval = [Int: Double]()
+        for possibleTip in possibleTipsInferred {
+            let intPct = Int(possibleTip*100)
+            retval[intPct] = calcTipWithTipPct(possibleTip)
+        }
+        return retval
+        
     }
     
 }
 
 let tipCalc = TipCalculator(total: 33.25, taxPct: 0.06)
-tipCalc.printPossibleTips()
+tipCalc.returnPossibleTips()
 
