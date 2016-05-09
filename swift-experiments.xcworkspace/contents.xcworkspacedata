@@ -2,12 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:2-playground/2-classes.playground">
+      location = "group:3-app/TipCalculator/TipCalculator.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:README.md">
    </FileRef>
    <FileRef
       location = "group:1-playground">
+   </FileRef>
+   <FileRef
+      location = "group:2-playground/2-classes.playground">
    </FileRef>
 </Workspace>
